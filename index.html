@@ -9,16 +9,55 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Allura&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
+/* BASE STYLES */
 body {
   margin:0;
   background: linear-gradient(180deg,#fff8f3,#fdeee6);
-  color:#7a5c55;
+  color:#4a3737;
   font-family:'Playfair Display', serif;
-  line-height:1.8;
+  line-height:1.6;
   overflow-x:hidden;
+  text-align:center;
 }
 
-/* SPARKLE ANIMATION */
+/* BRAND / HERO */
+.brand {
+  font-family:'Allura', cursive;
+  font-size:140px;
+  color:#b76e79;
+  letter-spacing:6px;
+  margin-top:60px;
+  text-shadow:0 0 12px rgba(183,110,121,0.35);
+}
+
+.tagline {
+  font-size:26px;
+  max-width:850px;
+  margin:30px auto 50px;
+  line-height:1.6;
+  font-weight:400;
+  text-align:center;
+}
+
+.button {
+  display:inline-block;
+  margin-top:20px;
+  padding:16px 55px;
+  border:1px solid #b76e79;
+  color:#b76e79;
+  text-decoration:none;
+  font-size:20px;
+  transition:0.4s ease;
+  border-radius:8px;
+}
+.button:hover {
+  background:#b76e79;
+  color:white;
+  transform:translateY(-3px);
+  box-shadow:0 10px 25px rgba(183,110,121,0.3);
+}
+
+/* SPARKLES */
 @keyframes sparkle {
   0%,100% {opacity:0.6; transform:scale(1);}
   50% {opacity:1; transform:scale(1.2);}
@@ -34,58 +73,16 @@ body {
   pointer-events:none;
 }
 
-/* BRAND / HERO */
-.brand {
-  font-family:'Allura', cursive;
-  font-size:140px;
-  color:#b76e79;
-  letter-spacing:6px;
-  text-align:center;
-  margin-top:60px;
-  text-shadow:0 0 12px rgba(183,110,121,0.35);
-  position:relative;
-}
-
-.tagline {
-  font-size:28px;
-  max-width:900px;
-  margin:30px auto 50px;
-  line-height:1.8;
-  font-weight:400;
-  text-align:center;
-}
-
-.button {
-  display:inline-block;
-  margin-top:20px;
-  padding:16px 55px;
-  border:1px solid #b76e79;
-  color:#b76e79;
-  text-decoration:none;
-  font-size:20px;
-  transition:0.4s ease;
-  border-radius:8px;
-  position:relative;
-  z-index:1;
-}
-.button:hover {
-  background:#b76e79;
-  color:white;
-  transform:translateY(-3px);
-  box-shadow:0 10px 25px rgba(183,110,121,0.3);
-}
-
 /* SECTIONS */
 section {
-  padding:120px 10%;
-  text-align:center;
+  padding:100px 10%;
   position:relative;
 }
 
 h2 {
-  font-size:52px;
+  font-size:48px;
   font-weight:400;
-  margin-bottom:50px;
+  margin-bottom:40px;
   color:#b76e79;
   position:relative;
 }
@@ -100,10 +97,10 @@ h2::after {
 }
 
 .text {
-  max-width:900px;
-  margin:30px auto;
-  font-size:22px;
-  line-height:2;
+  max-width:800px;
+  margin:25px auto;
+  font-size:20px;
+  line-height:1.65;
   color:#4a3737;
 }
 
@@ -111,77 +108,50 @@ h2::after {
 .collections {
   display:flex;
   justify-content:center;
-  gap:80px;
-  margin-top:70px;
+  gap:60px;
+  margin-top:50px;
   flex-wrap:wrap;
 }
 .collections div {
-  max-width:280px;
+  max-width:260px;
   background:white;
   padding:30px 20px;
   border-radius:12px;
   box-shadow:0 20px 40px rgba(0,0,0,0.06);
   transition:0.5s;
   position:relative;
-  overflow:hidden;
 }
 .collections div:hover {
-  transform:translateY(-10px);
-  box-shadow:0 35px 70px rgba(0,0,0,0.15);
+  transform:translateY(-8px);
+  box-shadow:0 30px 60px rgba(0,0,0,0.12);
 }
 .collections h3 {
-  font-size:32px;
+  font-size:30px;
   margin-bottom:18px;
   color:#b76e79;
 }
 .collections p {
   font-size:18px;
-  line-height:1.6;
+  line-height:1.5;
 }
 
 /* FOOTER */
 footer {
-  padding:80px 20px;
+  padding:60px 20px;
   font-size:16px;
   color:#a88a83;
   border-top:1px solid #e3d5cf;
-  text-align:center;
-}
-
-/* HERO PARALLAX EFFECT */
-.hero-background {
-  position: absolute;
-  top:0; left:0;
-  width:100%;
-  height:100%;
-  background: radial-gradient(circle, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 60%);
-  z-index:0;
-  pointer-events:none;
-  animation: float 15s ease-in-out infinite;
-}
-@keyframes float {
-  0%,100% {transform: translateY(0);}
-  50% {transform: translateY(-15px);}
-}
-
-/* FADE IN ANIMATION */
-@keyframes fadeIn {
-  from {opacity:0; transform:translateY(20px);}
-  to {opacity:1; transform:translateY(0);}
-}
-section, .brand, .tagline, .collections div {
-  animation: fadeIn 1.5s ease forwards;
 }
 
 /* RESPONSIVE */
 @media(max-width:768px){
   .brand{font-size:90px;}
   .tagline{font-size:22px;}
-  h2{font-size:42px;}
+  h2{font-size:38px;}
   .collections{gap:40px;}
-  .collections h3{font-size:28px;}
+  .collections h3{font-size:26px;}
   .collections p{font-size:16px;}
-  .text{font-size:20px;}
+  .text{font-size:18px;}
 }
 </style>
 </head>
@@ -194,7 +164,6 @@ section, .brand, .tagline, .collections div {
   European design. Timeless elegance. Crafted for the woman who carries legacy with grace.
 </div>
 <a href="#story" class="button">Shop Collection</a>
-<div class="hero-background"></div>
 
 <!-- SPARKLES -->
 <div class="sparkle" style="top:50px; left:20%; animation-delay:0s;"></div>
