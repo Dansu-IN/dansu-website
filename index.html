@@ -27,29 +27,44 @@ body{
 .header{
   position: fixed;
   top: 20px;
-  right: 40px;
+  right: 30px;
   z-index:1000;
   text-align:right;
-  display:flex;
-  flex-direction:column;
-  align-items:flex-end;
 }
 
 .logo-symbol{
-  width:60px;
-  height:60px;
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  font-weight: 700;
+  color:#b76e79;
+  position: relative;
+  display:inline-block;
   cursor:pointer;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
 }
-.logo-symbol:hover{
-  transform: rotate(15deg) scale(1.05);
+.logo-symbol::after{
+  content:'';
+  position:absolute;
+  width:20px;
+  height:2px;
+  background:#b76e79;
+  border-radius:2px;
+  bottom:0;
+  left:50%;
+  transform:translateX(-50%) rotate(15deg);
+  transition: all 0.3s ease;
 }
-
+.logo-symbol:hover::after{
+  width:28px;
+  transform:translateX(-50%) rotate(-5deg);
+}
 .logo-text{
   font-family:'Playfair Display', serif;
-  letter-spacing:5px;
-  font-size:16px;
-  margin-top:5px;
+  font-size:14px;
+  letter-spacing:4px;
+  color:#b76e79;
+  margin-top:3px;
+  text-align:center;
 }
 
 /* ===== Hero ===== */
@@ -61,7 +76,7 @@ body{
   align-items:center;
   text-align:center;
   padding:0 15%;
-  padding-top:180px; /* ensures logo doesn't overlap */
+  padding-top:100px; /* ensure logo doesn't overlap */
 }
 
 .hero h1{
@@ -162,10 +177,10 @@ footer{
     top:15px;
     right:20px;
   }
-  .logo-symbol{width:45px;height:45px;}
-  .logo-text{font-size:14px;}
+  .logo-symbol{font-size:36px;}
+  .logo-text{font-size:12px;}
   .hero{
-    padding-top:160px;
+    padding-top:140px;
     padding-left:10%;
     padding-right:10%;
   }
@@ -182,10 +197,10 @@ footer{
 }
 
 @media(max-width:480px){
-  .hero{padding-top:140px;}
+  .hero{padding-top:120px;}
   .hero h1{font-size:30px;}
   .hero .button{padding:10px 35px;font-size:16px;}
-  .logo-symbol{width:36px;height:36px;}
+  .logo-symbol{font-size:30px;}
   .logo-text{font-size:12px;}
 }
 </style>
@@ -195,12 +210,7 @@ footer{
 
 <!-- Logo -->
 <div class="header">
-  <!-- SVG Ballerina logo -->
-  <svg class="logo-symbol" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="32" cy="32" r="30" fill="#b76e79" opacity="0.2"/>
-    <path d="M32 10 C34 25, 40 30, 32 50 L30 50 C22 30, 28 25, 32 10 Z" fill="#b76e79"/>
-    <circle cx="32" cy="8" r="3" fill="#b76e79"/>
-  </svg>
+  <div class="logo-symbol">D</div>
   <div class="logo-text">Dansu</div>
 </div>
 
