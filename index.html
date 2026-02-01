@@ -3,59 +3,72 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dansu Jewellery</title>
+  <title>DANSU</title>
 
-  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Elegant font -->
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
     body {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Georgia', serif;
+      background-color: #0b0b0b;
+      color: #f5f5f5;
+    }
+    .gold {
+      color: #d4af37;
+    }
+    .gold-border {
+      border-color: #d4af37;
     }
   </style>
 </head>
 
-<body class="bg-[#0f0f0f] text-white">
+<body class="antialiased">
 
   <!-- HERO -->
   <section class="h-screen flex flex-col justify-center items-center text-center px-6">
-    <h1 class="text-6xl md:text-8xl tracking-widest mb-6">DANSU</h1>
-    <p class="max-w-2xl text-lg md:text-2xl text-gray-300 mb-10">
+    <h1 class="text-7xl tracking-widest gold mb-6">DANSU</h1>
+
+    <p class="text-xl max-w-2xl leading-relaxed text-gray-300 mb-10">
       European design. Timeless elegance. Crafted for the woman who carries legacy with grace.
     </p>
-    <a href="#story" class="border border-white px-8 py-3 text-lg hover:bg-white hover:text-black transition">
+
+    <button class="px-10 py-4 border gold-border gold text-lg tracking-wide hover:bg-[#d4af37] hover:text-black transition">
       Shop Collection
-    </a>
-    <div class="absolute bottom-10 animate-bounce text-gray-400">Scroll ↓</div>
+    </button>
   </section>
 
   <!-- STORY -->
-  <section id="story" class="min-h-screen bg-white text-black flex flex-col justify-center items-center text-center px-6">
-    <h2 class="text-5xl mb-8">Our Story</h2>
-    <p class="max-w-3xl text-xl leading-relaxed text-gray-700">
-      Dansu was never meant to be a business. It was always meant to be an expression.
-      Born from a lifelong love for fine jewellery and heritage aesthetics, Dansu brings
-      European design language to India through high-quality craftsmanship and timeless grace.
+  <section class="py-24 px-8 text-center bg-black">
+    <h2 class="text-4xl gold mb-8">Our Story</h2>
+    <p class="max-w-3xl mx-auto text-gray-400 leading-loose text-lg">
+      Dansu brings European artistry into timeless jewellery. Each piece is designed to be worn not just as adornment,
+      but as a statement of grace, legacy, and quiet confidence.
     </p>
   </section>
 
   <!-- COLLECTIONS -->
-  <section class="min-h-screen bg-[#f8f5f2] text-black flex flex-col justify-center items-center text-center px-6">
-    <h2 class="text-5xl mb-12">Collections</h2>
+  <section class="py-24 px-8 text-center">
+    <h2 class="text-4xl gold mb-16">Collections</h2>
 
-    <div class="grid md:grid-cols-3 gap-12 text-2xl">
-      <div class="border p-12 hover:shadow-xl transition">Earrings</div>
-      <div class="border p-12 hover:shadow-xl transition">Pendants</div>
-      <div class="border p-12 hover:shadow-xl transition">Bracelets</div>
+    <div class="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto text-gray-300">
+      <div>
+        <h3 class="text-2xl mb-4">Earrings</h3>
+        <p>Refined silhouettes crafted for everyday elegance.</p>
+      </div>
+      <div>
+        <h3 class="text-2xl mb-4">Pendants</h3>
+        <p>Delicate pieces that carry timeless charm.</p>
+      </div>
+      <div>
+        <h3 class="text-2xl mb-4">Bracelets</h3>
+        <p>Graceful accents designed to be treasured.</p>
+      </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-black text-gray-400 text-center py-8">
-    © 2026 Dansu Jewellery. All rights reserved.
+  <footer class="py-10 text-center text-gray-600 text-sm border-t border-gray-800">
+    © 2026 DANSU. Crafted with elegance.
   </footer>
 
 </body>
