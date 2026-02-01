@@ -5,103 +5,103 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>DANSU Jewellery</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Allura&display=swap" rel="stylesheet">
 
 <style>
+
 body{
   margin:0;
-  background:#0a0a0a;
-  color:#e8e4dc;
-  font-family:'Cormorant Garamond',serif;
-  letter-spacing:0.5px;
+  background:#f6efe9; /* ivory blush */
+  color:#7a5c55; /* rose gold text */
+  font-family:'Playfair Display', serif;
 }
 
 section{
-  padding:120px 8%;
+  padding:130px 10%;
   text-align:center;
 }
 
 .brand{
-  font-size:120px;
-  letter-spacing:20px;
-  font-weight:300;
-  background:linear-gradient(90deg,#c6a95a,#f3e7b3,#c6a95a);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  text-shadow:0 0 40px rgba(198,169,90,0.35);
+  font-family:'Allura', cursive;
+  font-size:140px;
+  color:#b76e79; /* rose gold */
+  letter-spacing:6px;
 }
 
 .tagline{
-  font-size:28px;
+  font-size:30px;
   max-width:900px;
   margin:40px auto;
-  line-height:1.6;
+  line-height:1.8;
+  font-weight:400;
 }
 
 .button{
   display:inline-block;
-  margin-top:40px;
-  padding:18px 50px;
-  border:1px solid #c6a95a;
-  color:#c6a95a;
+  margin-top:50px;
+  padding:16px 55px;
+  border:1px solid #b76e79;
+  color:#b76e79;
   text-decoration:none;
   font-size:20px;
-  transition:0.4s;
+  transition:0.4s ease;
 }
 .button:hover{
-  background:#c6a95a;
-  color:#000;
+  background:#b76e79;
+  color:white;
 }
 
 h2{
-  font-size:54px;
-  font-weight:300;
-  margin-bottom:40px;
-  background:linear-gradient(90deg,#c6a95a,#f3e7b3,#c6a95a);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
+  font-size:58px;
+  font-weight:400;
+  margin-bottom:50px;
+  color:#b76e79;
 }
 
-.story, .philosophy{
+.text{
   max-width:900px;
-  margin:auto;
-  font-size:24px;
+  margin:30px auto;
+  font-size:25px;
   line-height:1.9;
-  margin-bottom:30px;
 }
 
 .collections{
   display:flex;
   justify-content:center;
-  gap:120px;
-  margin-top:60px;
+  gap:140px;
+  margin-top:70px;
   flex-wrap:wrap;
 }
 
 .collections div{
-  max-width:260px;
+  max-width:280px;
 }
 
 .collections h3{
-  font-size:34px;
-  margin-bottom:15px;
-  color:#c6a95a;
+  font-size:36px;
+  margin-bottom:18px;
+  color:#b76e79;
 }
 
 footer{
-  padding:60px 0;
-  border-top:1px solid #222;
+  padding:80px 0;
+  border-top:1px solid #e3d5cf;
   font-size:16px;
-  color:#888;
+  color:#a88a83;
 }
+
+@media(max-width:768px){
+  .brand{font-size:90px;}
+  .collections{gap:60px;}
+}
+
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
 <section>
-  <div class="brand">DANSU</div>
+  <div class="brand">Dansu</div>
 
   <div class="tagline">
     European design. Timeless elegance. Crafted for the woman who carries legacy with grace.
@@ -110,41 +110,38 @@ footer{
   <a href="#story" class="button">Shop Collection</a>
 </section>
 
-<!-- STORY -->
 <section id="story">
   <h2>Our Story</h2>
 
-  <div class="story">
+  <div class="text">
     Dansu was never meant to be a business. It was born as an expression of a lifelong love for fine jewellery, heritage, and European design aesthetics.
   </div>
 
-  <div class="story">
+  <div class="text">
     Raised amidst the heritage and stories of a Zamindar home in Varanasi, and trained with the precision of a Chartered Accountant, the founder always found herself drawn to the elegance of European jewellery houses — where design feels artistic, powerful, and feminine at once.
   </div>
 
-  <div class="story">
+  <div class="text">
     Dansu is a bridge between worlds — where old heritage meets modern grace, where jewellery is not just worn, but lived with.
   </div>
 </section>
 
-<!-- PHILOSOPHY -->
 <section>
   <h2>Our Philosophy</h2>
 
-  <div class="philosophy">
+  <div class="text">
     Jewellery is not ornamentation. It is memory. It is presence. It is identity.
   </div>
 
-  <div class="philosophy">
+  <div class="text">
     Every Dansu piece is designed to feel timeless — something that could belong to a woman in Paris, Florence, or Varanasi alike.
   </div>
 
-  <div class="philosophy">
+  <div class="text">
     Minimal yet powerful. Elegant yet expressive. Quiet yet unforgettable.
   </div>
 </section>
 
-<!-- COLLECTIONS -->
 <section>
   <h2>Collections</h2>
 
