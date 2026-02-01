@@ -7,69 +7,95 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
 
+  <!-- Luxury Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
   <style>
     body {
-      font-family: 'Georgia', serif;
-      background-color: #0b0b0b;
+      font-family: 'Cormorant Garamond', serif;
+      background: #0b0b0b;
       color: #f5f5f5;
+      scroll-behavior: smooth;
     }
-    .gold {
+
+    .brand {
+      font-family: 'Great Vibes', cursive;
+      letter-spacing: 6px;
       color: #d4af37;
     }
-    .gold-border {
-      border-color: #d4af37;
+
+    .gold { color: #d4af37; }
+    .gold-border { border: 1px solid #d4af37; }
+
+    .section {
+      padding: 120px 20px;
+      text-align: center;
+      max-width: 1100px;
+      margin: auto;
     }
   </style>
 </head>
 
-<body class="antialiased">
+<body>
 
   <!-- HERO -->
-  <section class="h-screen flex flex-col justify-center items-center text-center px-6">
-    <h1 class="text-7xl tracking-widest gold mb-6">DANSU</h1>
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
+    
+    <!-- Logo space (we will add dancing D here later) -->
+    
+    <h1 class="text-9xl brand mb-6">Dansu</h1>
 
-    <p class="text-xl max-w-2xl leading-relaxed text-gray-300 mb-10">
-      European design. Timeless elegance. Crafted for the woman who carries legacy with grace.
+    <p class="text-xl md:text-2xl max-w-3xl leading-relaxed mb-10">
+      European design. Timeless elegance. Crafted for the woman who carries
+      legacy with grace.
     </p>
 
-    <button class="px-10 py-4 border gold-border gold text-lg tracking-wide hover:bg-[#d4af37] hover:text-black transition">
+    <a href="#collections" class="gold-border px-10 py-4 text-lg hover:bg-yellow-700/10 transition">
       Shop Collection
-    </button>
+    </a>
+
+    <div class="mt-20 text-gray-400">Scroll ↓</div>
   </section>
 
-  <!-- STORY -->
-  <section class="py-24 px-8 text-center bg-black">
-    <h2 class="text-4xl gold mb-8">Our Story</h2>
-    <p class="max-w-3xl mx-auto text-gray-400 leading-loose text-lg">
-      Dansu brings European artistry into timeless jewellery. Each piece is designed to be worn not just as adornment,
-      but as a statement of grace, legacy, and quiet confidence.
+
+  <!-- OUR STORY -->
+  <section class="section">
+    <h2 class="text-5xl gold mb-8">Our Story</h2>
+    <p class="text-xl leading-relaxed">
+      Dansu brings European artistry into timeless jewellery. Each piece is
+      designed to be worn not just as adornment, but as a statement of grace,
+      legacy, and quiet confidence.
     </p>
   </section>
+
 
   <!-- COLLECTIONS -->
-  <section class="py-24 px-8 text-center">
-    <h2 class="text-4xl gold mb-16">Collections</h2>
+  <section id="collections" class="section">
+    <h2 class="text-5xl gold mb-16">Collections</h2>
 
-    <div class="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto text-gray-300">
+    <div class="grid md:grid-cols-3 gap-16 text-center">
       <div>
-        <h3 class="text-2xl mb-4">Earrings</h3>
-        <p>Refined silhouettes crafted for everyday elegance.</p>
+        <h3 class="text-3xl gold mb-4">Earrings</h3>
+        <p class="text-lg">Refined silhouettes crafted for everyday elegance.</p>
       </div>
+
       <div>
-        <h3 class="text-2xl mb-4">Pendants</h3>
-        <p>Delicate pieces that carry timeless charm.</p>
+        <h3 class="text-3xl gold mb-4">Pendants</h3>
+        <p class="text-lg">Delicate pieces that carry timeless charm.</p>
       </div>
+
       <div>
-        <h3 class="text-2xl mb-4">Bracelets</h3>
-        <p>Graceful accents designed to be treasured.</p>
+        <h3 class="text-3xl gold mb-4">Bracelets</h3>
+        <p class="text-lg">Graceful accents designed to be treasured.</p>
       </div>
     </div>
   </section>
 
+
   <!-- FOOTER -->
-  <footer class="py-10 text-center text-gray-600 text-sm border-t border-gray-800">
-    © 2026 DANSU. Crafted with elegance.
-  </footer>
+  <section class="section">
+    <p class="text-gray-500">© 2026 Dansu Jewellery. All rights reserved.</p>
+  </section>
 
 </body>
 </html>
