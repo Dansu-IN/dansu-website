@@ -1,105 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-<title>Dansu Jewellery</title>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>DANSU Jewellery</title>
 
 <!-- Luxury Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Allura&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-/* GLOBAL */
-* {
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
 body {
-  font-family: 'Cormorant Garamond', serif;
+  margin:0;
   background: linear-gradient(180deg,#fff8f3,#fdeee6);
-  color:#3e2f2f;
-  line-height:1.9;
+  color:#7a5c55;
+  font-family:'Playfair Display', serif;
+  line-height:1.8;
   overflow-x:hidden;
 }
 
-/* LOGO */
-.logo {
-  font-family:'Playfair Display', serif;
-  font-size:56px;
-  letter-spacing:5px;
-  text-align:center;
-  margin-top:50px;
-  color:#b76e79;
-  text-shadow:0 0 16px rgba(183,110,121,0.35);
-  animation: fadeIn 1.5s ease forwards;
+/* SPARKLE ANIMATION */
+@keyframes sparkle {
+  0%,100% {opacity:0.6; transform:scale(1);}
+  50% {opacity:1; transform:scale(1.2);}
+}
+.sparkle {
+  position:absolute;
+  width:6px;
+  height:6px;
+  background:white;
+  border-radius:50%;
+  box-shadow:0 0 10px white;
+  animation: sparkle 2s infinite ease-in-out;
+  pointer-events:none;
 }
 
-/* HERO */
-.hero {
-  height:90vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
+/* BRAND / HERO */
+.brand {
+  font-family:'Allura', cursive;
+  font-size:140px;
+  color:#b76e79;
+  letter-spacing:6px;
   text-align:center;
-  padding:0 20px;
-  background:linear-gradient(180deg, rgba(255,248,243,0.9), rgba(253,238,230,0.9)), url('https://images.unsplash.com/photo-1555529771-205c0e4478fa?fit=crop&w=1950&q=80') no-repeat center/cover;
+  margin-top:60px;
+  text-shadow:0 0 12px rgba(183,110,121,0.35);
   position:relative;
 }
 
-.hero::before {
-  content:'';
-  position:absolute;
-  top:0; left:0;
-  width:100%; height:100%;
-  background: rgba(255, 248, 243, 0.35);
-  z-index:0;
-}
-
-.hero h1 {
-  font-size:3.5rem;
-  font-weight:300;
+.tagline {
+  font-size:28px;
   max-width:900px;
-  margin-bottom:30px;
-  z-index:1;
-  animation: slideUp 1.2s ease forwards;
+  margin:30px auto 50px;
+  line-height:1.8;
+  font-weight:400;
+  text-align:center;
 }
 
-.hero button {
-  padding:16px 48px;
-  border:none;
+.button {
+  display:inline-block;
+  margin-top:20px;
+  padding:16px 55px;
+  border:1px solid #b76e79;
+  color:#b76e79;
+  text-decoration:none;
+  font-size:20px;
+  transition:0.4s ease;
+  border-radius:8px;
+  position:relative;
+  z-index:1;
+}
+.button:hover {
   background:#b76e79;
   color:white;
-  font-size:20px;
-  letter-spacing:2px;
-  cursor:pointer;
-  transition:0.3s;
-  z-index:1;
-}
-
-.hero button:hover {
-  background:#a05863;
   transform:translateY(-3px);
+  box-shadow:0 10px 25px rgba(183,110,121,0.3);
 }
 
-/* SECTION STYLING */
+/* SECTIONS */
 section {
-  padding:100px 10%;
-}
-
-.section-title {
-  font-size:44px;
+  padding:120px 10%;
   text-align:center;
-  margin-bottom:40px;
-  font-weight:400;
-  color:#b76e79;
   position:relative;
 }
 
-.section-title::after {
+h2 {
+  font-size:52px;
+  font-weight:400;
+  margin-bottom:50px;
+  color:#b76e79;
+  position:relative;
+}
+h2::after {
   content:'';
   display:block;
   width:60px;
@@ -109,134 +99,158 @@ section {
   border-radius:2px;
 }
 
-.section-text {
-  font-size:22px;
-  text-align:center;
+.text {
   max-width:900px;
-  margin:0 auto;
+  margin:30px auto;
+  font-size:22px;
   line-height:2;
-}
-
-/* STORY SECTION */
-.story {
-  background:linear-gradient(180deg,#fdeee6,#fff8f3);
-  padding:120px 10%;
-  animation: fadeIn 1.8s ease forwards;
+  color:#4a3737;
 }
 
 /* COLLECTIONS */
 .collections {
   display:flex;
-  justify-content:space-between;
+  justify-content:center;
+  gap:80px;
+  margin-top:70px;
   flex-wrap:wrap;
-  gap:40px;
-  margin-top:60px;
 }
-
-.card {
-  flex:1;
-  min-width:250px;
-  text-align:center;
-  padding:50px 20px;
+.collections div {
+  max-width:280px;
   background:white;
-  box-shadow:0 25px 50px rgba(0,0,0,0.06);
+  padding:30px 20px;
   border-radius:12px;
-  transition:0.4s;
+  box-shadow:0 20px 40px rgba(0,0,0,0.06);
+  transition:0.5s;
+  position:relative;
+  overflow:hidden;
 }
-
-.card:hover {
-  transform:translateY(-10px) scale(1.02);
-  box-shadow:0 35px 70px rgba(0,0,0,0.12);
+.collections div:hover {
+  transform:translateY(-10px);
+  box-shadow:0 35px 70px rgba(0,0,0,0.15);
 }
-
-.card h3 {
+.collections h3 {
   font-size:32px;
-  margin-bottom:20px;
+  margin-bottom:18px;
   color:#b76e79;
 }
-
-.card p {
+.collections p {
   font-size:18px;
   line-height:1.6;
-  color:#4a3737;
 }
 
 /* FOOTER */
-.footer {
-  text-align:center;
+footer {
   padding:80px 20px;
-  font-size:18px;
-  background:#fff;
-  color:#3e2f2f;
-  border-top:1px solid #f1e1dc;
+  font-size:16px;
+  color:#a88a83;
+  border-top:1px solid #e3d5cf;
+  text-align:center;
 }
 
-/* ANIMATIONS */
+/* HERO PARALLAX EFFECT */
+.hero-background {
+  position: absolute;
+  top:0; left:0;
+  width:100%;
+  height:100%;
+  background: radial-gradient(circle, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 60%);
+  z-index:0;
+  pointer-events:none;
+  animation: float 15s ease-in-out infinite;
+}
+@keyframes float {
+  0%,100% {transform: translateY(0);}
+  50% {transform: translateY(-15px);}
+}
+
+/* FADE IN ANIMATION */
 @keyframes fadeIn {
   from {opacity:0; transform:translateY(20px);}
   to {opacity:1; transform:translateY(0);}
 }
-
-@keyframes slideUp {
-  from {opacity:0; transform:translateY(50px);}
-  to {opacity:1; transform:translateY(0);}
+section, .brand, .tagline, .collections div {
+  animation: fadeIn 1.5s ease forwards;
 }
 
-@media (max-width:900px) {
-  .hero h1 { font-size:2.2rem; }
-  .section-title { font-size:36px; }
-  .section-text { font-size:20px; }
-  .card h3 { font-size:28px; }
-  .card p { font-size:16px; }
+/* RESPONSIVE */
+@media(max-width:768px){
+  .brand{font-size:90px;}
+  .tagline{font-size:22px;}
+  h2{font-size:42px;}
+  .collections{gap:40px;}
+  .collections h3{font-size:28px;}
+  .collections p{font-size:16px;}
+  .text{font-size:20px;}
 }
-
 </style>
 </head>
 
 <body>
 
-<div class="logo">DANSU</div>
-
-<div class="hero">
-  <h1>European design. Timeless elegance. Crafted for the woman who carries legacy with grace.</h1>
-  <button>SHOP COLLECTION</button>
+<!-- HERO -->
+<div class="brand">Dansu</div>
+<div class="tagline">
+  European design. Timeless elegance. Crafted for the woman who carries legacy with grace.
 </div>
+<a href="#story" class="button">Shop Collection</a>
+<div class="hero-background"></div>
 
-<section class="story">
-  <div class="section-title">Our Story</div>
-  <div class="section-text">
+<!-- SPARKLES -->
+<div class="sparkle" style="top:50px; left:20%; animation-delay:0s;"></div>
+<div class="sparkle" style="top:120px; left:70%; animation-delay:1s;"></div>
+<div class="sparkle" style="top:200px; left:40%; animation-delay:2s;"></div>
+<div class="sparkle" style="top:300px; left:80%; animation-delay:1.5s;"></div>
+<div class="sparkle" style="top:400px; left:15%; animation-delay:2.2s;"></div>
+
+<!-- STORY -->
+<section id="story">
+  <h2>Our Story</h2>
+  <div class="text">
     Dansu was never meant to be a business. It was born as an expression of a lifelong love for fine jewellery, heritage, and European design aesthetics.
-    <br><br>
-    Raised amidst the stories and grace of a Zamindar home in Varanasi, and shaped by the precision of a Chartered Accountant’s discipline, the founder always found herself drawn to the elegance of European jewellery houses — where design feels artistic, powerful, and deeply feminine.
-    <br><br>
-    Dansu brings that emotion to life through jewellery meant not just to adorn, but to be remembered.
+  </div>
+  <div class="text">
+    Raised amidst the heritage and stories of a Zamindar home in Varanasi, and trained with the precision of a Chartered Accountant, the founder always found herself drawn to the elegance of European jewellery houses — where design feels artistic, powerful, and feminine at once.
+  </div>
+  <div class="text">
+    Dansu is a bridge between worlds — where old heritage meets modern grace, where jewellery is not just worn, but lived with.
   </div>
 </section>
 
 <section>
-  <div class="section-title">Collections</div>
+  <h2>Our Philosophy</h2>
+  <div class="text">
+    Jewellery is not ornamentation. It is memory. It is presence. It is identity.
+  </div>
+  <div class="text">
+    Every Dansu piece is designed to feel timeless — something that could belong to a woman in Paris, Florence, or Varanasi alike.
+  </div>
+  <div class="text">
+    Minimal yet powerful. Elegant yet expressive. Quiet yet unforgettable.
+  </div>
+</section>
 
+<section>
+  <h2>Collections</h2>
   <div class="collections">
-    <div class="card">
+    <div>
       <h3>Earrings</h3>
-      <p>Carried by light. Worn with presence. Designed for everyday elegance.</p>
+      <p>Refined silhouettes crafted for everyday elegance.</p>
     </div>
-
-    <div class="card">
+    <div>
       <h3>Pendants</h3>
-      <p>Delicate pieces that hold stories close to the heart.</p>
+      <p>Delicate pieces that carry timeless charm.</p>
     </div>
-
-    <div class="card">
+    <div>
       <h3>Bracelets</h3>
-      <p>Graceful accents created to be treasured for generations.</p>
+      <p>Graceful accents designed to be treasured.</p>
     </div>
   </div>
 </section>
 
-<div class="footer">
+<footer>
   © 2026 Dansu Jewellery. All rights reserved.
-</div>
+</footer>
 
 </body>
 </html>
