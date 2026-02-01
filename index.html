@@ -33,38 +33,19 @@ body{
 }
 
 .logo-symbol{
-  font-family: 'Playfair Display', serif;
-  font-size: 42px;
-  font-weight: 700;
+  font-family: 'Allura', cursive;
+  font-size: 48px;
   color:#b76e79;
-  position: relative;
   display:inline-block;
-  cursor:pointer;
-  transition: all 0.3s ease;
 }
-.logo-symbol::after{
-  content:'';
-  position:absolute;
-  width:20px;
-  height:2px;
-  background:#b76e79;
-  border-radius:2px;
-  bottom:0;
-  left:50%;
-  transform:translateX(-50%) rotate(15deg);
-  transition: all 0.3s ease;
-}
-.logo-symbol:hover::after{
-  width:28px;
-  transform:translateX(-50%) rotate(-5deg);
-}
+
 .logo-text{
   font-family:'Playfair Display', serif;
   font-size:14px;
   letter-spacing:4px;
   color:#b76e79;
-  margin-top:3px;
   text-align:center;
+  margin-top:2px;
 }
 
 /* ===== Hero ===== */
@@ -125,7 +106,7 @@ h2.section-title{
 .significance{
   font-size:24px;
   max-width:800px;
-  margin:30px auto;
+  margin:10px auto 20px auto; /* reduced spacing */
   font-style:italic;
   color:#8f6351;
 }
@@ -177,7 +158,7 @@ footer{
     top:15px;
     right:20px;
   }
-  .logo-symbol{font-size:36px;}
+  .logo-symbol{font-size:42px;}
   .logo-text{font-size:12px;}
   .hero{
     padding-top:140px;
@@ -188,7 +169,7 @@ footer{
   .hero .button{padding:12px 40px;font-size:18px;}
   h2.section-title{font-size:36px;}
   .section-text{font-size:18px; line-height:1.6;}
-  .significance{font-size:20px;}
+  .significance{font-size:20px; margin:8px auto 15px auto;}
   .collections{
     flex-direction:column;
     gap:40px;
@@ -200,7 +181,7 @@ footer{
   .hero{padding-top:120px;}
   .hero h1{font-size:30px;}
   .hero .button{padding:10px 35px;font-size:16px;}
-  .logo-symbol{font-size:30px;}
+  .logo-symbol{font-size:36px;}
   .logo-text{font-size:12px;}
 }
 </style>
