@@ -1,215 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
+<meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
 <title>DANSU Jewellery</title>
 
-<!-- Luxury Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Allura&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+<!-- Elegant Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Cormorant+Garamond:wght@300;400;600&family=Allura&display=swap" rel="stylesheet">
 
 <style>
-/* BASE STYLES */
-body {
+*{
   margin:0;
-  background: linear-gradient(180deg,#fff8f3,#fdeee6);
-  color:#4a3737;
-  font-family:'Playfair Display', serif;
-  line-height:1.6;
-  overflow-x:hidden;
-  text-align:center;
+  padding:0;
+  box-sizing:border-box;
 }
 
-/* BRAND / HERO */
-.brand {
+body{
+  background:linear-gradient(180deg,#fff8f3,#fdeee6);
+  color:#6e4f48;
+  font-family:'Cormorant Garamond', serif;
+  line-height:1.75;
+}
+
+/* ===== Top Logo Area ===== */
+.header{
+  position:fixed;
+  top:30px;
+  right:60px;
+  z-index:1000;
+  cursor:pointer;
+  text-align:right;
+}
+
+.logo-symbol{
   font-family:'Allura', cursive;
-  font-size:140px;
+  font-size:58px;
   color:#b76e79;
-  letter-spacing:6px;
-  margin-top:60px;
-  text-shadow:0 0 12px rgba(183,110,121,0.35);
+  line-height:0.7;
 }
 
-.tagline {
-  font-size:26px;
-  max-width:850px;
-  margin:30px auto 50px;
-  line-height:1.6;
-  font-weight:400;
+.logo-text{
+  font-family:'Playfair Display', serif;
+  letter-spacing:6px;
+  font-size:18px;
+  color:#b76e79;
+}
+
+/* ===== Sections ===== */
+section{
+  padding:120px 14%;
   text-align:center;
 }
 
-.button {
+.hero{
+  padding-top:180px;
+}
+
+.brand{
+  font-family:'Allura', cursive;
+  font-size:150px;
+  color:#b76e79;
+}
+
+.tagline{
+  font-size:30px;
+  max-width:900px;
+  margin:40px auto;
+}
+
+.button{
   display:inline-block;
-  margin-top:20px;
+  margin-top:50px;
   padding:16px 55px;
   border:1px solid #b76e79;
   color:#b76e79;
   text-decoration:none;
   font-size:20px;
   transition:0.4s ease;
-  border-radius:8px;
 }
-.button:hover {
+.button:hover{
   background:#b76e79;
   color:white;
-  transform:translateY(-3px);
-  box-shadow:0 10px 25px rgba(183,110,121,0.3);
 }
 
-/* SPARKLES */
-@keyframes sparkle {
-  0%,100% {opacity:0.6; transform:scale(1);}
-  50% {opacity:1; transform:scale(1.2);}
-}
-.sparkle {
-  position:absolute;
-  width:6px;
-  height:6px;
-  background:white;
-  border-radius:50%;
-  box-shadow:0 0 10px white;
-  animation: sparkle 2s infinite ease-in-out;
-  pointer-events:none;
-}
-
-/* SECTIONS */
-section {
-  padding:100px 10%;
-  position:relative;
-}
-
-h2 {
-  font-size:48px;
+h2{
+  font-size:56px;
   font-weight:400;
-  margin-bottom:40px;
+  margin-bottom:50px;
   color:#b76e79;
-  position:relative;
-}
-h2::after {
-  content:'';
-  display:block;
-  width:60px;
-  height:3px;
-  background:#b76e79;
-  margin:12px auto 0;
-  border-radius:2px;
+  font-family:'Playfair Display', serif;
 }
 
-.text {
-  max-width:800px;
-  margin:25px auto;
-  font-size:20px;
-  line-height:1.65;
-  color:#4a3737;
+.text{
+  max-width:900px;
+  margin:26px auto;
+  font-size:24px;
 }
 
-/* COLLECTIONS */
-.collections {
+.dansu-meaning{
+  font-style:italic;
+  color:#b76e79;
+  font-size:26px;
+  margin-top:40px;
+}
+
+/* Collections */
+.collections{
   display:flex;
   justify-content:center;
-  gap:60px;
-  margin-top:50px;
+  gap:120px;
+  margin-top:70px;
   flex-wrap:wrap;
 }
-.collections div {
-  max-width:260px;
-  background:white;
-  padding:30px 20px;
-  border-radius:12px;
-  box-shadow:0 20px 40px rgba(0,0,0,0.06);
-  transition:0.5s;
-  position:relative;
+
+.collections div{
+  max-width:280px;
 }
-.collections div:hover {
-  transform:translateY(-8px);
-  box-shadow:0 30px 60px rgba(0,0,0,0.12);
-}
-.collections h3 {
-  font-size:30px;
+
+.collections h3{
+  font-size:34px;
   margin-bottom:18px;
   color:#b76e79;
 }
-.collections p {
-  font-size:18px;
-  line-height:1.5;
-}
 
-/* FOOTER */
-footer {
-  padding:60px 20px;
+footer{
+  padding:80px 0;
+  border-top:1px solid #e3d5cf;
   font-size:16px;
   color:#a88a83;
-  border-top:1px solid #e3d5cf;
 }
 
-/* RESPONSIVE */
+/* Responsive */
 @media(max-width:768px){
   .brand{font-size:90px;}
-  .tagline{font-size:22px;}
-  h2{font-size:38px;}
-  .collections{gap:40px;}
-  .collections h3{font-size:26px;}
-  .collections p{font-size:16px;}
-  .text{font-size:18px;}
+  .collections{gap:60px;}
+  .header{right:25px;}
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<div class="brand">Dansu</div>
-<div class="tagline">
-  European design. Timeless elegance. Crafted for the woman who carries legacy with grace.
+<!-- ===== Logo (future nav anchor) ===== -->
+<div class="header">
+  <div class="logo-symbol">D</div>
+  <div class="logo-text">DANSU</div>
 </div>
-<a href="#story" class="button">Shop Collection</a>
 
-<!-- SPARKLES -->
-<div class="sparkle" style="top:50px; left:20%; animation-delay:0s;"></div>
-<div class="sparkle" style="top:120px; left:70%; animation-delay:1s;"></div>
-<div class="sparkle" style="top:200px; left:40%; animation-delay:2s;"></div>
-<div class="sparkle" style="top:300px; left:80%; animation-delay:1.5s;"></div>
-<div class="sparkle" style="top:400px; left:15%; animation-delay:2.2s;"></div>
+<!-- ===== Hero ===== -->
+<section class="hero">
+  <div class="brand">Dansu</div>
 
-<!-- STORY -->
+  <div class="tagline">
+    European design. Timeless elegance. Crafted for the woman who carries legacy with grace.
+  </div>
+
+  <a href="#story" class="button">Shop Collection</a>
+</section>
+
+<!-- ===== Story ===== -->
 <section id="story">
   <h2>Our Story</h2>
+
   <div class="text">
     Dansu was never meant to be a business. It was born as an expression of a lifelong love for fine jewellery, heritage, and European design aesthetics.
   </div>
+
   <div class="text">
     Raised amidst the heritage and stories of a Zamindar home in Varanasi, and trained with the precision of a Chartered Accountant, the founder always found herself drawn to the elegance of European jewellery houses — where design feels artistic, powerful, and feminine at once.
   </div>
+
   <div class="text">
     Dansu is a bridge between worlds — where old heritage meets modern grace, where jewellery is not just worn, but lived with.
   </div>
+
+  <div class="dansu-meaning">
+    “Dansu” means to dance — every piece is designed to move, catch the light, and celebrate the quiet rhythm of the woman who wears it.
+  </div>
 </section>
 
+<!-- ===== Philosophy ===== -->
 <section>
   <h2>Our Philosophy</h2>
+
   <div class="text">
     Jewellery is not ornamentation. It is memory. It is presence. It is identity.
   </div>
+
   <div class="text">
     Every Dansu piece is designed to feel timeless — something that could belong to a woman in Paris, Florence, or Varanasi alike.
   </div>
+
   <div class="text">
     Minimal yet powerful. Elegant yet expressive. Quiet yet unforgettable.
   </div>
 </section>
 
+<!-- ===== Collections ===== -->
 <section>
   <h2>Collections</h2>
+
   <div class="collections">
     <div>
       <h3>Earrings</h3>
       <p>Refined silhouettes crafted for everyday elegance.</p>
     </div>
+
     <div>
       <h3>Pendants</h3>
       <p>Delicate pieces that carry timeless charm.</p>
     </div>
+
     <div>
       <h3>Bracelets</h3>
       <p>Graceful accents designed to be treasured.</p>
