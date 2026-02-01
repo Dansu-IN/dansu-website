@@ -44,7 +44,7 @@ body{
 
 /* ===== Hero ===== */
 .hero{
-  height:90vh;
+  min-height:90vh;
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -93,7 +93,7 @@ h2.section-title{
   font-size:22px;
   max-width:900px;
   margin:20px auto;
-  line-height:1.9;
+  line-height:1.8;
 }
 
 /* ===== Dansu Significance ===== */
@@ -109,7 +109,7 @@ h2.section-title{
 .collections{
   display:flex;
   justify-content:center;
-  gap:140px;
+  gap:120px;
   margin-top:70px;
   flex-wrap:wrap;
 }
@@ -148,19 +148,35 @@ footer{
 }
 
 @media(max-width:768px){
-  .header{top:15px; right:20px;}
+  .header{
+    top:15px;
+    right:20px;
+  }
   .logo-symbol{font-size:36px;}
   .logo-text{font-size:14px;}
-  .hero{padding-top:140px;}
+  .hero{
+    padding-top:160px; /* shrink hero padding */
+    padding-left:10%;
+    padding-right:10%;
+  }
+  .hero h1{font-size:36px;}
+  .hero .button{padding:12px 40px;font-size:18px;}
+  h2.section-title{font-size:36px;}
+  .section-text{font-size:18px; line-height:1.6;}
+  .significance{font-size:20px;}
   .collections{
     flex-direction:column;
     gap:40px;
     align-items:center;
   }
-  .hero h1{font-size:38px;}
-  h2.section-title{font-size:38px;}
-  .section-text{font-size:18px;}
-  .significance{font-size:20px;}
+}
+
+@media(max-width:480px){
+  .hero{padding-top:140px;}
+  .hero h1{font-size:30px;}
+  .hero .button{padding:10px 35px;font-size:16px;}
+  .logo-symbol{font-size:28px;}
+  .logo-text{font-size:12px;}
 }
 </style>
 </head>
